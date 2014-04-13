@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2F485EC18FB1AA800F54EE1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */; };
+		C2F485F618FB1AA800F54EE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2F485F418FB1AA800F54EE1 /* InfoPlist.strings */; };
+		C2F485F818FB1AA800F54EE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F485F718FB1AA800F54EE1 /* main.m */; };
+		C2F485FC18FB1AA800F54EE1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C2F485FA18FB1AA800F54EE1 /* Credits.rtf */; };
+		C2F485FF18FB1AA800F54EE1 /* raditunesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F485FE18FB1AA800F54EE1 /* raditunesAppDelegate.m */; };
+		C2F4860218FB1AA900F54EE1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F4860018FB1AA900F54EE1 /* MainMenu.xib */; };
+		C2F4860418FB1AA900F54EE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2F4860318FB1AA900F54EE1 /* Images.xcassets */; };
+		C2F4860B18FB1AA900F54EE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F4860A18FB1AA900F54EE1 /* XCTest.framework */; };
+		C2F4860C18FB1AA900F54EE1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */; };
+		C2F4861418FB1AA900F54EE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2F4861218FB1AA900F54EE1 /* InfoPlist.strings */; };
+		C2F4861618FB1AA900F54EE1 /* raditunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4861518FB1AA900F54EE1 /* raditunesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2F4860D18FB1AA900F54EE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2F485E018FB1AA800F54EE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2F485E718FB1AA800F54EE1;
+			remoteInfo = raditunes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C2F485E818FB1AA800F54EE1 /* raditunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = raditunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C2F485EE18FB1AA800F54EE1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C2F485EF18FB1AA800F54EE1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C2F485F018FB1AA800F54EE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C2F485F318FB1AA800F54EE1 /* raditunes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "raditunes-Info.plist"; sourceTree = "<group>"; };
+		C2F485F518FB1AA800F54EE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2F485F718FB1AA800F54EE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2F485F918FB1AA800F54EE1 /* raditunes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "raditunes-Prefix.pch"; sourceTree = "<group>"; };
+		C2F485FB18FB1AA800F54EE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C2F485FD18FB1AA800F54EE1 /* raditunesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = raditunesAppDelegate.h; sourceTree = "<group>"; };
+		C2F485FE18FB1AA800F54EE1 /* raditunesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = raditunesAppDelegate.m; sourceTree = "<group>"; };
+		C2F4860118FB1AA900F54EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C2F4860318FB1AA900F54EE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C2F4860918FB1AA900F54EE1 /* raditunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = raditunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F4860A18FB1AA900F54EE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C2F4861118FB1AA900F54EE1 /* raditunesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "raditunesTests-Info.plist"; sourceTree = "<group>"; };
+		C2F4861318FB1AA900F54EE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2F4861518FB1AA900F54EE1 /* raditunesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = raditunesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2F485E518FB1AA800F54EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F485EC18FB1AA800F54EE1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F4860618FB1AA900F54EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F4860C18FB1AA900F54EE1 /* Cocoa.framework in Frameworks */,
+				C2F4860B18FB1AA900F54EE1 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2F485DF18FB1AA800F54EE1 = {
+			isa = PBXGroup;
+			children = (
+				C2F485F118FB1AA800F54EE1 /* raditunes */,
+				C2F4860F18FB1AA900F54EE1 /* raditunesTests */,
+				C2F485EA18FB1AA800F54EE1 /* Frameworks */,
+				C2F485E918FB1AA800F54EE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2F485E918FB1AA800F54EE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2F485E818FB1AA800F54EE1 /* raditunes.app */,
+				C2F4860918FB1AA900F54EE1 /* raditunesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2F485EA18FB1AA800F54EE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */,
+				C2F4860A18FB1AA900F54EE1 /* XCTest.framework */,
+				C2F485ED18FB1AA800F54EE1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2F485ED18FB1AA800F54EE1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2F485EE18FB1AA800F54EE1 /* AppKit.framework */,
+				C2F485EF18FB1AA800F54EE1 /* CoreData.framework */,
+				C2F485F018FB1AA800F54EE1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C2F485F118FB1AA800F54EE1 /* raditunes */ = {
+			isa = PBXGroup;
+			children = (
+				C2F485FD18FB1AA800F54EE1 /* raditunesAppDelegate.h */,
+				C2F485FE18FB1AA800F54EE1 /* raditunesAppDelegate.m */,
+				C2F4860018FB1AA900F54EE1 /* MainMenu.xib */,
+				C2F4860318FB1AA900F54EE1 /* Images.xcassets */,
+				C2F485F218FB1AA800F54EE1 /* Supporting Files */,
+			);
+			path = raditunes;
+			sourceTree = "<group>";
+		};
+		C2F485F218FB1AA800F54EE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2F485F318FB1AA800F54EE1 /* raditunes-Info.plist */,
+				C2F485F418FB1AA800F54EE1 /* InfoPlist.strings */,
+				C2F485F718FB1AA800F54EE1 /* main.m */,
+				C2F485F918FB1AA800F54EE1 /* raditunes-Prefix.pch */,
+				C2F485FA18FB1AA800F54EE1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2F4860F18FB1AA900F54EE1 /* raditunesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2F4861518FB1AA900F54EE1 /* raditunesTests.m */,
+				C2F4861018FB1AA900F54EE1 /* Supporting Files */,
+			);
+			path = raditunesTests;
+			sourceTree = "<group>";
+		};
+		C2F4861018FB1AA900F54EE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2F4861118FB1AA900F54EE1 /* raditunesTests-Info.plist */,
+				C2F4861218FB1AA900F54EE1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2F485E718FB1AA800F54EE1 /* raditunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F4861918FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "raditunes" */;
+			buildPhases = (
+				C2F485E418FB1AA800F54EE1 /* Sources */,
+				C2F485E518FB1AA800F54EE1 /* Frameworks */,
+				C2F485E618FB1AA800F54EE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = raditunes;
+			productName = raditunes;
+			productReference = C2F485E818FB1AA800F54EE1 /* raditunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2F4860818FB1AA900F54EE1 /* raditunesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F4861C18FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "raditunesTests" */;
+			buildPhases = (
+				C2F4860518FB1AA900F54EE1 /* Sources */,
+				C2F4860618FB1AA900F54EE1 /* Frameworks */,
+				C2F4860718FB1AA900F54EE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2F4860E18FB1AA900F54EE1 /* PBXTargetDependency */,
+			);
+			name = raditunesTests;
+			productName = raditunesTests;
+			productReference = C2F4860918FB1AA900F54EE1 /* raditunesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2F485E018FB1AA800F54EE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = raditunes;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Nobuyuki Sato";
+				TargetAttributes = {
+					C2F4860818FB1AA900F54EE1 = {
+						TestTargetID = C2F485E718FB1AA800F54EE1;
+					};
+				};
+			};
+			buildConfigurationList = C2F485E318FB1AA800F54EE1 /* Build configuration list for PBXProject "raditunes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2F485DF18FB1AA800F54EE1;
+			productRefGroup = C2F485E918FB1AA800F54EE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2F485E718FB1AA800F54EE1 /* raditunes */,
+				C2F4860818FB1AA900F54EE1 /* raditunesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2F485E618FB1AA800F54EE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F485F618FB1AA800F54EE1 /* InfoPlist.strings in Resources */,
+				C2F4860418FB1AA900F54EE1 /* Images.xcassets in Resources */,
+				C2F485FC18FB1AA800F54EE1 /* Credits.rtf in Resources */,
+				C2F4860218FB1AA900F54EE1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F4860718FB1AA900F54EE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F4861418FB1AA900F54EE1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2F485E418FB1AA800F54EE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F485FF18FB1AA800F54EE1 /* raditunesAppDelegate.m in Sources */,
+				C2F485F818FB1AA800F54EE1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F4860518FB1AA900F54EE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F4861618FB1AA900F54EE1 /* raditunesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2F4860E18FB1AA900F54EE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2F485E718FB1AA800F54EE1 /* raditunes */;
+			targetProxy = C2F4860D18FB1AA900F54EE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2F485F418FB1AA800F54EE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2F485F518FB1AA800F54EE1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C2F485FA18FB1AA800F54EE1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2F485FB18FB1AA800F54EE1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C2F4860018FB1AA900F54EE1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2F4860118FB1AA900F54EE1 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		C2F4861218FB1AA900F54EE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2F4861318FB1AA900F54EE1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2F4861718FB1AA900F54EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C2F4861818FB1AA900F54EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C2F4861A18FB1AA900F54EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "raditunes/raditunes-Prefix.pch";
+				INFOPLIST_FILE = "raditunes/raditunes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C2F4861B18FB1AA900F54EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "raditunes/raditunes-Prefix.pch";
+				INFOPLIST_FILE = "raditunes/raditunes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C2F4861D18FB1AA900F54EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/raditunes.app/Contents/MacOS/raditunes";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "raditunes/raditunes-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "raditunesTests/raditunesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C2F4861E18FB1AA900F54EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/raditunes.app/Contents/MacOS/raditunes";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "raditunes/raditunes-Prefix.pch";
+				INFOPLIST_FILE = "raditunesTests/raditunesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2F485E318FB1AA800F54EE1 /* Build configuration list for PBXProject "raditunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F4861718FB1AA900F54EE1 /* Debug */,
+				C2F4861818FB1AA900F54EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F4861918FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "raditunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F4861A18FB1AA900F54EE1 /* Debug */,
+				C2F4861B18FB1AA900F54EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C2F4861C18FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "raditunesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F4861D18FB1AA900F54EE1 /* Debug */,
+				C2F4861E18FB1AA900F54EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2F485E018FB1AA800F54EE1 /* Project object */;
+}
