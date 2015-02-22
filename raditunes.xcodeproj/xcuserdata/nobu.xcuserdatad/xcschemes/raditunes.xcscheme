@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C2F485E718FB1AA800F54EE1"
-               BuildableName = "raditunes.app"
-               BlueprintName = "raditunes"
+               BuildableName = "Raditunes.app"
+               BlueprintName = "Raditunes"
                ReferencedContainer = "container:raditunes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C2F485E718FB1AA800F54EE1"
-            BuildableName = "raditunes.app"
-            BlueprintName = "raditunes"
+            BuildableName = "Raditunes.app"
+            BlueprintName = "Raditunes"
             ReferencedContainer = "container:raditunes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C2F485E718FB1AA800F54EE1"
-            BuildableName = "raditunes.app"
-            BlueprintName = "raditunes"
+            BuildableName = "Raditunes.app"
+            BlueprintName = "Raditunes"
             ReferencedContainer = "container:raditunes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C2F485E718FB1AA800F54EE1"
-            BuildableName = "raditunes.app"
-            BlueprintName = "raditunes"
+            BuildableName = "Raditunes.app"
+            BlueprintName = "Raditunes"
             ReferencedContainer = "container:raditunes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

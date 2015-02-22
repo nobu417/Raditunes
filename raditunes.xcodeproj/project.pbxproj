@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2E1A29D18FBD01600307481 /* channels.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E1A29C18FBD01600307481 /* channels.plist */; };
 		C2F485EC18FB1AA800F54EE1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */; };
 		C2F485F618FB1AA800F54EE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2F485F418FB1AA800F54EE1 /* InfoPlist.strings */; };
 		C2F485F818FB1AA800F54EE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F485F718FB1AA800F54EE1 /* main.m */; };
 		C2F485FC18FB1AA800F54EE1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C2F485FA18FB1AA800F54EE1 /* Credits.rtf */; };
 		C2F485FF18FB1AA800F54EE1 /* raditunesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F485FE18FB1AA800F54EE1 /* raditunesAppDelegate.m */; };
 		C2F4860218FB1AA900F54EE1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F4860018FB1AA900F54EE1 /* MainMenu.xib */; };
-		C2F4860418FB1AA900F54EE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2F4860318FB1AA900F54EE1 /* Images.xcassets */; };
 		C2F4860B18FB1AA900F54EE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F4860A18FB1AA900F54EE1 /* XCTest.framework */; };
 		C2F4860C18FB1AA900F54EE1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */; };
 		C2F4861418FB1AA900F54EE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2F4861218FB1AA900F54EE1 /* InfoPlist.strings */; };
 		C2F4861618FB1AA900F54EE1 /* raditunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4861518FB1AA900F54EE1 /* raditunesTests.m */; };
+		C2F4862318FB1BCD00F54EE1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862118FB1BCD00F54EE1 /* icon.png */; };
+		C2F4862418FB1BCD00F54EE1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862218FB1BCD00F54EE1 /* icon@2x.png */; };
+		C2F4862618FB1C1900F54EE1 /* Untitled.icns in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862518FB1C1900F54EE1 /* Untitled.icns */; };
+		C2F4862818FB1CA000F54EE1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F4862718FB1CA000F54EE1 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C2F485E818FB1AA800F54EE1 /* raditunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = raditunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E1A29C18FBD01600307481 /* channels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = channels.plist; sourceTree = "<group>"; };
+		C2F485E818FB1AA800F54EE1 /* raditunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = raditunes.app; path = Raditunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C2F485EE18FB1AA800F54EE1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C2F485EF18FB1AA800F54EE1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -44,12 +49,15 @@
 		C2F485FD18FB1AA800F54EE1 /* raditunesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = raditunesAppDelegate.h; sourceTree = "<group>"; };
 		C2F485FE18FB1AA800F54EE1 /* raditunesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = raditunesAppDelegate.m; sourceTree = "<group>"; };
 		C2F4860118FB1AA900F54EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		C2F4860318FB1AA900F54EE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C2F4860918FB1AA900F54EE1 /* raditunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = raditunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F4860A18FB1AA900F54EE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C2F4861118FB1AA900F54EE1 /* raditunesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "raditunesTests-Info.plist"; sourceTree = "<group>"; };
 		C2F4861318FB1AA900F54EE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C2F4861518FB1AA900F54EE1 /* raditunesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = raditunesTests.m; sourceTree = "<group>"; };
+		C2F4862118FB1BCD00F54EE1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C2F4862218FB1BCD00F54EE1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		C2F4862518FB1C1900F54EE1 /* Untitled.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Untitled.icns; sourceTree = "<group>"; };
+		C2F4862718FB1CA000F54EE1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F4862818FB1CA000F54EE1 /* WebKit.framework in Frameworks */,
 				C2F485EC18FB1AA800F54EE1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +85,7 @@
 		C2F485DF18FB1AA800F54EE1 = {
 			isa = PBXGroup;
 			children = (
+				C2F4862518FB1C1900F54EE1 /* Untitled.icns */,
 				C2F485F118FB1AA800F54EE1 /* raditunes */,
 				C2F4860F18FB1AA900F54EE1 /* raditunesTests */,
 				C2F485EA18FB1AA800F54EE1 /* Frameworks */,
@@ -95,6 +105,7 @@
 		C2F485EA18FB1AA800F54EE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2F4862718FB1CA000F54EE1 /* WebKit.framework */,
 				C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */,
 				C2F4860A18FB1AA900F54EE1 /* XCTest.framework */,
 				C2F485ED18FB1AA800F54EE1 /* Other Frameworks */,
@@ -118,8 +129,10 @@
 				C2F485FD18FB1AA800F54EE1 /* raditunesAppDelegate.h */,
 				C2F485FE18FB1AA800F54EE1 /* raditunesAppDelegate.m */,
 				C2F4860018FB1AA900F54EE1 /* MainMenu.xib */,
-				C2F4860318FB1AA900F54EE1 /* Images.xcassets */,
+				C2F4862118FB1BCD00F54EE1 /* icon.png */,
+				C2F4862218FB1BCD00F54EE1 /* icon@2x.png */,
 				C2F485F218FB1AA800F54EE1 /* Supporting Files */,
+				C2E1A29C18FBD01600307481 /* channels.plist */,
 			);
 			path = raditunes;
 			sourceTree = "<group>";
@@ -157,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C2F485E718FB1AA800F54EE1 /* raditunes */ = {
+		C2F485E718FB1AA800F54EE1 /* Raditunes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2F4861918FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "raditunes" */;
+			buildConfigurationList = C2F4861918FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "Raditunes" */;
 			buildPhases = (
 				C2F485E418FB1AA800F54EE1 /* Sources */,
 				C2F485E518FB1AA800F54EE1 /* Frameworks */,
@@ -169,7 +182,7 @@
 			);
 			dependencies = (
 			);
-			name = raditunes;
+			name = Raditunes;
 			productName = raditunes;
 			productReference = C2F485E818FB1AA800F54EE1 /* raditunes.app */;
 			productType = "com.apple.product-type.application";
@@ -220,7 +233,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2F485E718FB1AA800F54EE1 /* raditunes */,
+				C2F485E718FB1AA800F54EE1 /* Raditunes */,
 				C2F4860818FB1AA900F54EE1 /* raditunesTests */,
 			);
 		};
@@ -231,10 +244,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E1A29D18FBD01600307481 /* channels.plist in Resources */,
 				C2F485F618FB1AA800F54EE1 /* InfoPlist.strings in Resources */,
-				C2F4860418FB1AA900F54EE1 /* Images.xcassets in Resources */,
+				C2F4862318FB1BCD00F54EE1 /* icon.png in Resources */,
 				C2F485FC18FB1AA800F54EE1 /* Credits.rtf in Resources */,
 				C2F4860218FB1AA900F54EE1 /* MainMenu.xib in Resources */,
+				C2F4862418FB1BCD00F54EE1 /* icon@2x.png in Resources */,
+				C2F4862618FB1C1900F54EE1 /* Untitled.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +287,7 @@
 /* Begin PBXTargetDependency section */
 		C2F4860E18FB1AA900F54EE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C2F485E718FB1AA800F54EE1 /* raditunes */;
+			target = C2F485E718FB1AA800F54EE1 /* Raditunes */;
 			targetProxy = C2F4860D18FB1AA900F54EE1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -385,7 +401,6 @@
 		C2F4861A18FB1AA900F54EE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "raditunes/raditunes-Prefix.pch";
@@ -398,7 +413,6 @@
 		C2F4861B18FB1AA900F54EE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "raditunes/raditunes-Prefix.pch";
@@ -460,13 +474,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2F4861918FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "raditunes" */ = {
+		C2F4861918FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "Raditunes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2F4861A18FB1AA900F54EE1 /* Debug */,
 				C2F4861B18FB1AA900F54EE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2F4861C18FB1AA900F54EE1 /* Build configuration list for PBXNativeTarget "raditunesTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +490,7 @@
 				C2F4861E18FB1AA900F54EE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
