@@ -15,6 +15,10 @@
 @property (assign) IBOutlet NSWindow *prefWindow;
 @property (assign) IBOutlet WebView *webView;
 
+@property (assign) IBOutlet NSView *prefPanel;
+@property (assign) IBOutlet NSView *aboutPanel;
+@property (assign) IBOutlet NSTextField *versionLabel;
+
 @property (assign) IBOutlet NSButton *Hokkaido;
 @property (assign) IBOutlet NSButton *Kanto;
 @property (assign) IBOutlet NSButton *Hokuriku;
@@ -38,5 +42,8 @@
 - (IBAction)tuning:(id)sender;
 - (IBAction)playAndPause:(id)sender;
 - (IBAction)toggleIfMenuShown:(id)sender;
+
+- (IBAction)togglePrefWindowPanels:(id)sender;
+- (IBAction)openGitHub:(id)sender;
 
 @end

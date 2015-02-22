@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2668DCD1A9A4013004B4D03 /* System Preferences.icns in Resources */ = {isa = PBXBuildFile; fileRef = C2668DCC1A9A4013004B4D03 /* System Preferences.icns */; };
 		C2E1A29D18FBD01600307481 /* channels.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E1A29C18FBD01600307481 /* channels.plist */; };
 		C2F485EC18FB1AA800F54EE1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */; };
 		C2F485F618FB1AA800F54EE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2F485F418FB1AA800F54EE1 /* InfoPlist.strings */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2668DCC1A9A4013004B4D03 /* System Preferences.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "System Preferences.icns"; sourceTree = "<group>"; };
 		C2E1A29C18FBD01600307481 /* channels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = channels.plist; sourceTree = "<group>"; };
 		C2F485E818FB1AA800F54EE1 /* raditunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = raditunes.app; path = Raditunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -126,6 +128,7 @@
 		C2F485F118FB1AA800F54EE1 /* raditunes */ = {
 			isa = PBXGroup;
 			children = (
+				C2668DCC1A9A4013004B4D03 /* System Preferences.icns */,
 				C2F485FD18FB1AA800F54EE1 /* raditunesAppDelegate.h */,
 				C2F485FE18FB1AA800F54EE1 /* raditunesAppDelegate.m */,
 				C2F4860018FB1AA900F54EE1 /* MainMenu.xib */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E1A29D18FBD01600307481 /* channels.plist in Resources */,
+				C2668DCD1A9A4013004B4D03 /* System Preferences.icns in Resources */,
 				C2F485F618FB1AA800F54EE1 /* InfoPlist.strings in Resources */,
 				C2F4862318FB1BCD00F54EE1 /* icon.png in Resources */,
 				C2F485FC18FB1AA800F54EE1 /* Credits.rtf in Resources */,

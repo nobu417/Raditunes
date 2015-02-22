@@ -98,6 +98,8 @@
     [[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
     [_prefWindow makeKeyAndOrderFront:_prefWindow];
     [_prefWindow orderWindow:NSWindowAbove relativeTo:0];
+    NSString* version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    [_versionLabel setStringValue: [NSString stringWithFormat:@"Version %@", version]];
 }
 
 - (IBAction)playAndPause:(id)sender
@@ -212,4 +214,24 @@
     [userDefaults synchronize];
 }
 
+- (IBAction)togglePrefWindowPanels:(id)sender
+{
+    switch ([sender tag]) {
+        case 1:
+            [_prefPanel setHidden: false];
+            [_aboutPanel setHidden: true];
+            break;
+        case 2:
+            [_prefPanel setHidden: true];
+            [_aboutPanel setHidden: false];
+            break;
+    }
+}
+
+- (IBAction)openGitHub:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://github.com/nobu417/Raditunes"];
+    [[NSWorkspace sharedWorkspace] openURL:url];
+//    [[NSApplication sharedApplication] openURL:url];
+}
 @end
