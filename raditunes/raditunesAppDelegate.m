@@ -95,6 +95,8 @@
 
 -(IBAction)showPrefWindow:(id)sender
 {
+    [_prefPanel setHidden: false];
+    [_aboutPanel setHidden: true];
     [[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
     [_prefWindow makeKeyAndOrderFront:_prefWindow];
     [_prefWindow orderWindow:NSWindowAbove relativeTo:0];
