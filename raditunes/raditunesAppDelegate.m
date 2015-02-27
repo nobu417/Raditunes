@@ -234,6 +234,12 @@
 {
     NSURL *url = [NSURL URLWithString:@"http://github.com/nobu417/Raditunes"];
     [[NSWorkspace sharedWorkspace] openURL:url];
-//    [[NSApplication sharedApplication] openURL:url];
+}
+
+- (IBAction)openRadikoJp:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://radiko.jp/"];
+    [[NSWorkspace sharedWorkspace] openURL:url];
+
 }
 @end

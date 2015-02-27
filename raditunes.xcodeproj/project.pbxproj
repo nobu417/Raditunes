@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		C2668DCC1A9A4013004B4D03 /* System Preferences.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "System Preferences.icns"; sourceTree = "<group>"; };
 		C2E1A29C18FBD01600307481 /* channels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = channels.plist; sourceTree = "<group>"; };
-		C2F485E818FB1AA800F54EE1 /* raditunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = raditunes.app; path = Raditunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F485E818FB1AA800F54EE1 /* Raditunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raditunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C2F485EE18FB1AA800F54EE1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C2F485EF18FB1AA800F54EE1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -98,7 +98,7 @@
 		C2F485E918FB1AA800F54EE1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2F485E818FB1AA800F54EE1 /* raditunes.app */,
+				C2F485E818FB1AA800F54EE1 /* Raditunes.app */,
 				C2F4860918FB1AA900F54EE1 /* raditunesTests.xctest */,
 			);
 			name = Products;
@@ -187,7 +187,7 @@
 			);
 			name = Raditunes;
 			productName = raditunes;
-			productReference = C2F485E818FB1AA800F54EE1 /* raditunes.app */;
+			productReference = C2F485E818FB1AA800F54EE1 /* Raditunes.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C2F4860818FB1AA900F54EE1 /* raditunesTests */ = {

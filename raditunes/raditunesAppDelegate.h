@@ -45,5 +45,6 @@
 
 - (IBAction)togglePrefWindowPanels:(id)sender;
 - (IBAction)openGitHub:(id)sender;
+- (IBAction)openRadikoJp:(id)sender;
 
 @end
