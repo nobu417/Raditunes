@@ -31,6 +31,7 @@
                 <outlet property="menuKanto" destination="77p-tz-fjg" id="v49-EX-p9j"/>
                 <outlet property="menuKinki" destination="str-Hf-S8A" id="i7b-iq-53u"/>
                 <outlet property="menuKyushu" destination="ZlK-ho-sT5" id="qgl-lm-40g"/>
+                <outlet property="menuPlaying" destination="wyR-e7-ECJ" id="X7M-OO-Y6m"/>
                 <outlet property="menuZenkoku" destination="h8k-f9-5GT" id="dt6-5T-ihT"/>
                 <outlet property="prefPanel" destination="qnX-7n-0bJ" id="bxg-dT-ICc"/>
                 <outlet property="prefWindow" destination="AbZ-U1-mfT" id="XMe-mm-jZr"/>
@@ -43,6 +44,10 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="8so-xo-mei">
             <items>
+                <menuItem title="放送局は未選択です" enabled="NO" id="wyR-e7-ECJ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="WpY-Be-ELw"/>
                 <menuItem title="radiko.jp を開く..." id="F5D-16-jkd">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

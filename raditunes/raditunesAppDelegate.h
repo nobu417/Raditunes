@@ -37,6 +37,8 @@
 @property (assign) IBOutlet NSMenuItem *menuKyushu;
 @property (assign) IBOutlet NSMenuItem *menuZenkoku;
 
+@property (assign) IBOutlet NSMenuItem *menuPlaying;
+
 - (IBAction)showWindow:(id)sender;
 - (IBAction)showPrefWindow:(id)sender;
 - (IBAction)tuning:(id)sender;
