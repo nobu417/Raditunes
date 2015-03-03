@@ -21,7 +21,7 @@
 		C2F4861618FB1AA900F54EE1 /* raditunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4861518FB1AA900F54EE1 /* raditunesTests.m */; };
 		C2F4862318FB1BCD00F54EE1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862118FB1BCD00F54EE1 /* icon.png */; };
 		C2F4862418FB1BCD00F54EE1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862218FB1BCD00F54EE1 /* icon@2x.png */; };
-		C2F4862618FB1C1900F54EE1 /* Untitled.icns in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862518FB1C1900F54EE1 /* Untitled.icns */; };
+		C2F4862618FB1C1900F54EE1 /* Raditunes.icns in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862518FB1C1900F54EE1 /* Raditunes.icns */; };
 		C2F4862818FB1CA000F54EE1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F4862718FB1CA000F54EE1 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		C2F4861518FB1AA900F54EE1 /* raditunesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = raditunesTests.m; sourceTree = "<group>"; };
 		C2F4862118FB1BCD00F54EE1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C2F4862218FB1BCD00F54EE1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		C2F4862518FB1C1900F54EE1 /* Untitled.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Untitled.icns; sourceTree = "<group>"; };
+		C2F4862518FB1C1900F54EE1 /* Raditunes.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Raditunes.icns; sourceTree = "<group>"; };
 		C2F4862718FB1CA000F54EE1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -87,7 +87,7 @@
 		C2F485DF18FB1AA800F54EE1 = {
 			isa = PBXGroup;
 			children = (
-				C2F4862518FB1C1900F54EE1 /* Untitled.icns */,
+				C2F4862518FB1C1900F54EE1 /* Raditunes.icns */,
 				C2F485F118FB1AA800F54EE1 /* raditunes */,
 				C2F4860F18FB1AA900F54EE1 /* raditunesTests */,
 				C2F485EA18FB1AA800F54EE1 /* Frameworks */,
@@ -254,7 +254,7 @@
 				C2F485FC18FB1AA800F54EE1 /* Credits.rtf in Resources */,
 				C2F4860218FB1AA900F54EE1 /* MainMenu.xib in Resources */,
 				C2F4862418FB1BCD00F54EE1 /* icon@2x.png in Resources */,
-				C2F4862618FB1C1900F54EE1 /* Untitled.icns in Resources */,
+				C2F4862618FB1C1900F54EE1 /* Raditunes.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

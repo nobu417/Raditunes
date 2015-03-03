@@ -18,13 +18,17 @@
     NSMenuItem *currentItem;
     NSDictionary *dic;
     NSUserDefaults *userDefaults;
-    int *status;
+    NSInteger status;
 }
+
+// ======================================================================
+// Main.
+// ======================================================================
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // UserDefaults をロード
+    // Loading UserDefaults.
     userDefaults = [NSUserDefaults standardUserDefaults];
-    // メニューに表示する地域の状態を復元
+    // Setting areas to show based on UserDefaults.
     int array[2] = {1, 0};
     array[0] = 1;
     array[1] = 0;
@@ -37,7 +41,7 @@
     [_menuKyushu setHidden:array[[userDefaults integerForKey: @"Kyushu"]]];
     [_menuZenkoku setHidden:array[[userDefaults integerForKey: @"Zenkoku"]]];
 
-    // 設定画面のチェックボックスの状態を復元
+    // Restoring status of checkboxs based on UserDefaults.
     [_Hokkaido setState: [userDefaults integerForKey: @"Hokkaido"]];
     [_Kanto setState: [userDefaults integerForKey: @"Kanto"]];
     [_Hokuriku setState: [userDefaults integerForKey: @"Hokuriku"]];
@@ -47,35 +51,33 @@
     [_Kyushu setState: [userDefaults integerForKey: @"Kyushu"]];
     [_Zenkoku setState: [userDefaults integerForKey: @"Zenkoku"]];
     
-    // Insert code here to initialize your application
-    // plist から放送局リストを読み込み
+    // Loading the stations from dictonary.
     NSString *path = [[NSBundle mainBundle] pathForResource:@"channels" ofType:@"plist"];
     dic = [NSDictionary dictionaryWithContentsOfFile: path];
     status = 0;
     [_webView setMainFrameURL:@"http://radiko.jp/player/swf/player_4.1.0.00.swf?_=2012111501&station_id="];
+
+    // Checking if it's darkmode and setting up icon on Menubar.
     [self refreshDarkMode];
     [self setupStatusItem];
 }
 
-- (BOOL)windowShouldClose:(id)sender
-{
-    [_window orderOut:sender];
-    return NO;
-}
-
+// ======================================================================
+// Main :: Initializing event for menubar.
+// ======================================================================
 - (void)setupStatusItem
 {
     NSStatusBar *systemStatusBar = [NSStatusBar systemStatusBar];
     _statusItem = [systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
-    //[_statusItem setHighlightMode:YES];
-    //[_statusItem setTitle:@"StatusBarApp"];
-    //[_statusItem setImage:[NSImage imageNamed:@"icon"]];
     NSImage *image= [NSImage imageNamed:@"icon"];
     [image setTemplate:YES];
     [_statusItem setImage:image];
     [_statusItem setMenu:self.statusMenu];
 }
 
+// ======================================================================
+// Main window :: Event to check if it's darkmode.
+// ======================================================================
 - (void)refreshDarkMode {
     NSString *value = (__bridge NSString *)(CFPreferencesCopyValue((CFStringRef)@"AppleInterfaceStyle", kCFPreferencesAnyApplication, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost));
     if ([value isEqualToString:@"Dark"]) {
@@ -86,6 +88,9 @@
     }
 }
 
+// ======================================================================
+// Main window :: Showing event.
+// ======================================================================
 -(IBAction)showWindow:(id)sender
 {
     [[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
@@ -93,6 +98,20 @@
     [_window orderWindow:NSWindowAbove relativeTo:0];
 }
 
+// ======================================================================
+// Main window :: Closing event.
+// ======================================================================
+- (BOOL)windowShouldClose:(id)sender
+{
+    // Do not close window.
+    // Just to hide and set it working on background.
+    [_window orderOut:sender];
+    return NO;
+}
+
+// ======================================================================
+// Preference window :: Showing event.
+// ======================================================================
 -(IBAction)showPrefWindow:(id)sender
 {
     [_prefPanel setHidden: false];
@@ -104,39 +123,60 @@
     [_versionLabel setStringValue: [NSString stringWithFormat:@"Version %@", version]];
 }
 
+// ======================================================================
+// Mainmenu :: Play/Pause
+// ======================================================================
 - (IBAction)playAndPause:(id)sender
 {
     if ((currentItem != nil) && (status == 0)) {
-        // 再生
+        // To play.
+        int tag_value = (int)[currentItem tag];
         status = 1;
-        NSString *stationKey = [[NSNumber numberWithUnsignedInt:[currentItem tag]] stringValue];
+        NSString *stationKey = [[NSNumber numberWithUnsignedInt: tag_value] stringValue];
         NSString *stationId = [dic objectForKey:stationKey];
         NSString *uriBase = @"http://radiko.jp/player/swf/player_4.1.0.00.swf?_=2012111501&station_id=";
         NSString *uriString = [NSString stringWithFormat:@"%@%@", uriBase, stationId];
         [_webView setMainFrameURL:uriString];
     } else if ((currentItem != nil) && (status == 1)) {
-        // 停止
+        // To pause.
         status = 0;
         [_webView setMainFrameURL:@"http://radiko.jp/player/swf/player_4.1.0.00.swf?_=2012111501&station_id="];
     }
 }
 
+// ======================================================================
+// Mainmenu :: Choose station.
+// ======================================================================
 - (IBAction)tuning:(id)sender
 {
-    // 選択されていたメニューを解除して、選択中のメニューを選択したメニューにする
+    int tag_value = (int)[sender tag];
+    // Uncheck selected menu of the station.
+    // Check menu of the station selected.
     [currentItem setState:NSOffState]; currentItem = sender;
     [sender setState:NSOnState];
     status = 1;
-    // 放送局を切り替え
-    NSString *stationKey = [[NSNumber numberWithUnsignedInt:[sender tag]] stringValue];
+    // Change station.
+    NSString *stationKey = [[NSNumber numberWithUnsignedInt: tag_value] stringValue];
     NSString *stationId = [dic objectForKey:stationKey];
     NSString *uriBase = @"http://radiko.jp/player/swf/player_4.1.0.00.swf?_=2012111501&station_id=";
     NSString *uriString = [NSString stringWithFormat:@"%@%@", uriBase, stationId];
     [_webView setMainFrameURL:uriString];
     [_menuPlaying setTitle: [NSString stringWithFormat:@"%@ を再生中...", [currentItem title]]];
-    //[_menuPlaying setTitle: [sender getStringValue]];
 }
 
+// ======================================================================
+// Mainmenu :: Open radiko.jp
+// ======================================================================
+- (IBAction)openRadikoJp:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://radiko.jp/"];
+    [[NSWorkspace sharedWorkspace] openURL:url];
+    
+}
+
+// ======================================================================
+// Preference :: Set if menu is shown based on preference.
+// ======================================================================
 - (IBAction)toggleIfMenuShown:(id)sender
 {
     NSButton *button = sender;
@@ -217,6 +257,9 @@
     [userDefaults synchronize];
 }
 
+// ======================================================================
+// Preference :: Toggle preference panel / about panel.
+// ======================================================================
 - (IBAction)togglePrefWindowPanels:(id)sender
 {
     switch ([sender tag]) {
@@ -231,16 +274,13 @@
     }
 }
 
+// ======================================================================
+// Preference :: Open GitHub.
+// ======================================================================
 - (IBAction)openGitHub:(id)sender
 {
     NSURL *url = [NSURL URLWithString:@"http://github.com/nobu417/Raditunes"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
-- (IBAction)openRadikoJp:(id)sender
-{
-    NSURL *url = [NSURL URLWithString:@"http://radiko.jp/"];
-    [[NSWorkspace sharedWorkspace] openURL:url];
-
-}
 @end

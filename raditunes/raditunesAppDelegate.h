@@ -11,34 +11,50 @@
 
 @interface raditunesAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSWindow *prefWindow;
+// ======================================================================
+// Outlets of root.
+// ======================================================================
+@property (assign) IBOutlet NSWindow *window;           // Main window.
+@property (assign) IBOutlet NSWindow *prefWindow;       // Preference window.
+
+// ======================================================================
+// Outlets of main window.
+// ======================================================================
 @property (assign) IBOutlet WebView *webView;
 
-@property (assign) IBOutlet NSView *prefPanel;
-@property (assign) IBOutlet NSView *aboutPanel;
-@property (assign) IBOutlet NSTextField *versionLabel;
+// ======================================================================
+// Outlets of preferene window.
+// ======================================================================
+@property (assign) IBOutlet NSView *prefPanel;          // Preference panel on preference window.
+@property (assign) IBOutlet NSView *aboutPanel;         // About panel on preference window.
 
-@property (assign) IBOutlet NSButton *Hokkaido;
-@property (assign) IBOutlet NSButton *Kanto;
-@property (assign) IBOutlet NSButton *Hokuriku;
-@property (assign) IBOutlet NSButton *Chubu;
-@property (assign) IBOutlet NSButton *Kinki;
-@property (assign) IBOutlet NSButton *Chugoku;
-@property (assign) IBOutlet NSButton *Kyushu;
-@property (assign) IBOutlet NSButton *Zenkoku;
+@property (assign) IBOutlet NSTextField *versionLabel;  // Label to show version information.
+@property (assign) IBOutlet NSButton *Hokkaido;         // Checkbox of Hokkaido.
+@property (assign) IBOutlet NSButton *Kanto;            // Checkbox of Kanto.
+@property (assign) IBOutlet NSButton *Hokuriku;         // Checkbox of Hokuriku.
+@property (assign) IBOutlet NSButton *Chubu;            // Checkbox of Chubu.
+@property (assign) IBOutlet NSButton *Kinki;            // Checkbox of Kinki.
+@property (assign) IBOutlet NSButton *Chugoku;          // Checkbox of Chugoku.
+@property (assign) IBOutlet NSButton *Kyushu;           // Checkbox of Kyushu.
+@property (assign) IBOutlet NSButton *Zenkoku;          // Checkbox of Zenkoku.
 
-@property (assign) IBOutlet NSMenuItem *menuHokkaido;
-@property (assign) IBOutlet NSMenuItem *menuKanto;
-@property (assign) IBOutlet NSMenuItem *menuHokuriku;
-@property (assign) IBOutlet NSMenuItem *menuChubu;
-@property (assign) IBOutlet NSMenuItem *menuKinki;
-@property (assign) IBOutlet NSMenuItem *menuChugoku;
-@property (assign) IBOutlet NSMenuItem *menuKyushu;
-@property (assign) IBOutlet NSMenuItem *menuZenkoku;
+// ======================================================================
+// Outlets of main menu.
+// ======================================================================
+@property (assign) IBOutlet NSMenuItem *menuHokkaido;   // Menu item of Hokkaido.
+@property (assign) IBOutlet NSMenuItem *menuKanto;      // Menu item of Hokkaido.
+@property (assign) IBOutlet NSMenuItem *menuHokuriku;   // Menu item of Hokkaido.
+@property (assign) IBOutlet NSMenuItem *menuChubu;      // Menu item of Hokkaido.
+@property (assign) IBOutlet NSMenuItem *menuKinki;      // Menu item of Hokkaido.
+@property (assign) IBOutlet NSMenuItem *menuChugoku;    // Menu item of Hokkaido.
+@property (assign) IBOutlet NSMenuItem *menuKyushu;     // Menu item of Hokkaido.
+@property (assign) IBOutlet NSMenuItem *menuZenkoku;    // Menu item of Zenkoku.
 
 @property (assign) IBOutlet NSMenuItem *menuPlaying;
 
+// ======================================================================
+// Events.
+// ======================================================================
 - (IBAction)showWindow:(id)sender;
 - (IBAction)showPrefWindow:(id)sender;
 - (IBAction)tuning:(id)sender;
