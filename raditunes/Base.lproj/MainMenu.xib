@@ -577,53 +577,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="388" height="306"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FkB-Us-Xnw">
-                        <rect key="frame" x="0.0" y="153" width="388" height="154"/>
-                        <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8E-07-k7L">
-                                <rect key="frame" x="20" y="54" width="80" height="80"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Raditunes" id="XdD-hs-EXB"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-Np-RbR">
-                                <rect key="frame" x="262" y="55" width="48" height="48"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="mLg-aN-lpK"/>
-                            </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gse-65-DPK">
-                                <rect key="frame" x="106" y="86" width="80" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 0.00" usesSingleLineMode="YES" id="rsf-pB-aBs">
-                                    <font key="font" size="13" name="HelveticaNeue-Thin"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqr-XA-OLZ">
-                                <rect key="frame" x="106" y="102" width="128" height="32"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Raditunes" id="QbS-i9-2et">
-                                    <font key="font" size="24" name="HelveticaNeue-UltraLight"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-dX-dsb">
-                                <rect key="frame" x="106" y="44" width="264" height="38"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="An app to listen to radiko.jp easily from the menubar of your Mac." id="FEF-mh-2ks">
-                                    <font key="font" size="12" name="HelveticaNeue-Thin"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CdN-vv-7eA">
-                                <rect key="frame" x="246" y="17" width="122" height="19"/>
-                                <buttonCell key="cell" type="roundRect" title="View on GitHub" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i1x-ch-vs6">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="cellTitle"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="openGitHub:" target="Voe-Tx-rLC" id="WHL-RU-3rx"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </customView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qnX-7n-0bJ">
                         <rect key="frame" x="0.0" y="6" width="388" height="300"/>
                         <subviews>
@@ -779,6 +732,53 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" size="11" name="HiraKakuProN-W3"/>
                             </box>
+                        </subviews>
+                    </customView>
+                    <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FkB-Us-Xnw">
+                        <rect key="frame" x="0.0" y="153" width="388" height="154"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-Np-RbR">
+                                <rect key="frame" x="262" y="55" width="48" height="48"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="mLg-aN-lpK"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gse-65-DPK">
+                                <rect key="frame" x="118" y="86" width="252" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version 0.00" usesSingleLineMode="YES" id="rsf-pB-aBs">
+                                    <font key="font" size="13" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqr-XA-OLZ">
+                                <rect key="frame" x="118" y="102" width="128" height="32"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Raditunes" id="QbS-i9-2et">
+                                    <font key="font" size="24" name="HelveticaNeue-UltraLight"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Arb-dX-dsb">
+                                <rect key="frame" x="118" y="44" width="252" height="38"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The app to listen to radiko.jp easily and directly from the menubar of your Mac." id="FEF-mh-2ks">
+                                    <font key="font" size="12" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CdN-vv-7eA">
+                                <rect key="frame" x="246" y="17" width="122" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="View on GitHub" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i1x-ch-vs6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openGitHub:" target="Voe-Tx-rLC" id="WHL-RU-3rx"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8E-07-k7L">
+                                <rect key="frame" x="12" y="39" width="100" height="100"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Raditunes" id="XdD-hs-EXB"/>
+                            </imageView>
                         </subviews>
                     </customView>
                 </subviews>
