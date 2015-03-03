@@ -50,7 +50,7 @@
 		C2F485FB18FB1AA800F54EE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		C2F485FD18FB1AA800F54EE1 /* raditunesAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = raditunesAppDelegate.h; sourceTree = "<group>"; };
 		C2F485FE18FB1AA800F54EE1 /* raditunesAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = raditunesAppDelegate.m; sourceTree = "<group>"; };
-		C2F4860118FB1AA900F54EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C2F4860118FB1AA900F54EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		C2F4860918FB1AA900F54EE1 /* raditunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = raditunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F4860A18FB1AA900F54EE1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C2F4861118FB1AA900F54EE1 /* raditunesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "raditunesTests-Info.plist"; sourceTree = "<group>"; };

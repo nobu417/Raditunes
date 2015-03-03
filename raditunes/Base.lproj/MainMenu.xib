@@ -24,6 +24,7 @@
                 <outlet property="Kyushu" destination="KFd-Xx-Alh" id="wvS-ff-odZ"/>
                 <outlet property="Zenkoku" destination="sQH-Ih-R2Y" id="r29-CV-ICV"/>
                 <outlet property="aboutPanel" destination="FkB-Us-Xnw" id="FJK-ef-10Y"/>
+                <outlet property="generalPanel" destination="qnX-7n-0bJ" id="J9c-1N-9I0"/>
                 <outlet property="menuChubu" destination="Yfu-Yx-dyk" id="BGb-lg-Cjv"/>
                 <outlet property="menuChugoku" destination="xlU-7s-8NU" id="hJG-FK-kRn"/>
                 <outlet property="menuHokkaido" destination="INg-tD-kj2" id="04X-UY-Cyx"/>
@@ -33,9 +34,12 @@
                 <outlet property="menuKyushu" destination="ZlK-ho-sT5" id="qgl-lm-40g"/>
                 <outlet property="menuPlaying" destination="wyR-e7-ECJ" id="X7M-OO-Y6m"/>
                 <outlet property="menuZenkoku" destination="h8k-f9-5GT" id="dt6-5T-ihT"/>
-                <outlet property="prefPanel" destination="qnX-7n-0bJ" id="bxg-dT-ICc"/>
                 <outlet property="prefWindow" destination="AbZ-U1-mfT" id="XMe-mm-jZr"/>
+                <outlet property="radioGuide" destination="6Kn-8s-8Fr" id="fRC-MU-gXL"/>
+                <outlet property="radioGuideURL" destination="MMp-Hh-g4u" id="k0g-GP-tmn"/>
                 <outlet property="statusMenu" destination="8so-xo-mei" id="fkb-qn-tRc"/>
+                <outlet property="useCustomURL" destination="LkG-U6-V4o" id="jja-J5-E0E"/>
+                <outlet property="useRadikoJp" destination="lQA-RM-cOO" id="5cR-4b-efC"/>
                 <outlet property="versionLabel" destination="Gse-65-DPK" id="oCT-CB-kfI"/>
                 <outlet property="webView" destination="sxG-Vw-NHh" id="Hbm-jS-mqW"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="qhJ-qe-6gw"/>
@@ -48,10 +52,10 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="WpY-Be-ELw"/>
-                <menuItem title="radiko.jp を開く..." id="F5D-16-jkd">
+                <menuItem title="番組表を開く..." id="F5D-16-jkd">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="openRadikoJp:" target="Voe-Tx-rLC" id="3hI-Wp-72n"/>
+                        <action selector="openRadioGuide:" target="Voe-Tx-rLC" id="yjq-Lq-1fz"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="xPv-lt-X28"/>
@@ -567,119 +571,18 @@
         </window>
         <window title="環境設定" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="AbZ-U1-mfT">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="163" y="199" width="388" height="153"/>
+            <rect key="contentRect" x="163" y="199" width="388" height="306"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" id="Led-h9-8Qm">
-                <rect key="frame" x="0.0" y="0.0" width="388" height="153"/>
+                <rect key="frame" x="0.0" y="0.0" width="388" height="306"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qnX-7n-0bJ">
-                        <rect key="frame" x="0.0" y="-55" width="388" height="209"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45l-yD-Jz4">
-                                <rect key="frame" x="18" y="174" width="82" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="表示する地域" id="rgp-5J-Co1">
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ud-RX-4Md">
-                                <rect key="frame" x="122" y="174" width="100" height="17"/>
-                                <buttonCell key="cell" type="check" title="北海道・東北" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KOH-as-MDj">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="6WU-6B-7vR"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="cZH-a7-5bL">
-                                <rect key="frame" x="122" y="154" width="61" height="18"/>
-                                <buttonCell key="cell" type="check" title="関東" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="wgZ-Om-ih8">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="jyy-Ar-a41"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="Y73-JG-zqA">
-                                <rect key="frame" x="122" y="134" width="100" height="18"/>
-                                <buttonCell key="cell" type="check" title="北陸・甲信越" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tZn-q0-yqA">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                    <connections>
-                                        <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="VO2-Y2-7GJ"/>
-                                    </connections>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="OcO-TZ-9al">
-                                <rect key="frame" x="122" y="114" width="61" height="18"/>
-                                <buttonCell key="cell" type="check" title="中部" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="IZh-yJ-fXL">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="Egf-Tt-QOc"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="qyX-60-LGD">
-                                <rect key="frame" x="248" y="173" width="61" height="18"/>
-                                <buttonCell key="cell" type="check" title="近畿" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="r43-mZ-p8z">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="zcb-ui-V2b"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="z24-nG-3Oa">
-                                <rect key="frame" x="248" y="154" width="87" height="18"/>
-                                <buttonCell key="cell" type="check" title="中国・四国" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="wjj-Tb-0BG">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="KNV-BG-ns0"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="KFd-Xx-Alh">
-                                <rect key="frame" x="248" y="134" width="87" height="18"/>
-                                <buttonCell key="cell" type="check" title="九州・沖縄" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qIf-mC-hDR">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="4TZ-gH-Ucp"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="sQH-Ih-R2Y">
-                                <rect key="frame" x="248" y="114" width="61" height="18"/>
-                                <buttonCell key="cell" type="check" title="全国" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fFb-wc-tvT">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="gzO-BM-Hmq"/>
-                                </connections>
-                            </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rgd-NP-mB1">
-                                <rect key="frame" x="18" y="74" width="352" height="34"/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="radiko.jp プレミアム会員の場合は、ウェブブラウザでログインしていれば全地域の放送を視聴できます。" id="cRs-i6-Mk8">
-                                    <font key="font" metaFont="cellTitle"/>
-                                    <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                    </customView>
                     <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FkB-Us-Xnw">
-                        <rect key="frame" x="0.0" y="0.0" width="388" height="154"/>
+                        <rect key="frame" x="0.0" y="153" width="388" height="154"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8E-07-k7L">
                                 <rect key="frame" x="20" y="54" width="80" height="80"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Untitled" id="XdD-hs-EXB"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Raditunes" id="XdD-hs-EXB"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-Np-RbR">
                                 <rect key="frame" x="262" y="55" width="48" height="48"/>
@@ -721,18 +624,175 @@
                             </button>
                         </subviews>
                     </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qnX-7n-0bJ">
+                        <rect key="frame" x="0.0" y="6" width="388" height="300"/>
+                        <subviews>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="表示する地域" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="p8O-F5-NtT">
+                                <rect key="frame" x="17" y="127" width="354" height="153"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="352" height="137"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rgd-NP-mB1">
+                                            <rect key="frame" x="16" y="13" width="320" height="34"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="radiko.jp プレミアム会員の場合は、ウェブブラウザでログインしていれば全地域の放送を視聴できます。" id="cRs-i6-Mk8">
+                                                <font key="font" metaFont="cellTitle"/>
+                                                <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ud-RX-4Md">
+                                            <rect key="frame" x="16" y="112" width="100" height="17"/>
+                                            <buttonCell key="cell" type="check" title="北海道・東北" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KOH-as-MDj">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="6WU-6B-7vR"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="cZH-a7-5bL">
+                                            <rect key="frame" x="16" y="92" width="61" height="18"/>
+                                            <buttonCell key="cell" type="check" title="関東" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="wgZ-Om-ih8">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="jyy-Ar-a41"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="Y73-JG-zqA">
+                                            <rect key="frame" x="16" y="72" width="100" height="18"/>
+                                            <buttonCell key="cell" type="check" title="北陸・甲信越" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tZn-q0-yqA">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                                <connections>
+                                                    <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="VO2-Y2-7GJ"/>
+                                                </connections>
+                                            </buttonCell>
+                                        </button>
+                                        <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="OcO-TZ-9al">
+                                            <rect key="frame" x="16" y="52" width="61" height="18"/>
+                                            <buttonCell key="cell" type="check" title="中部" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="IZh-yJ-fXL">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="Egf-Tt-QOc"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="qyX-60-LGD">
+                                            <rect key="frame" x="179" y="111" width="61" height="18"/>
+                                            <buttonCell key="cell" type="check" title="近畿" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="r43-mZ-p8z">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="zcb-ui-V2b"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="z24-nG-3Oa">
+                                            <rect key="frame" x="179" y="92" width="87" height="18"/>
+                                            <buttonCell key="cell" type="check" title="中国・四国" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="wjj-Tb-0BG">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="KNV-BG-ns0"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="KFd-Xx-Alh">
+                                            <rect key="frame" x="179" y="72" width="87" height="18"/>
+                                            <buttonCell key="cell" type="check" title="九州・沖縄" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qIf-mC-hDR">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="4TZ-gH-Ucp"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="sQH-Ih-R2Y">
+                                            <rect key="frame" x="179" y="52" width="61" height="18"/>
+                                            <buttonCell key="cell" type="check" title="全国" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fFb-wc-tvT">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="toggleIfMenuShown:" target="Voe-Tx-rLC" id="gzO-BM-Hmq"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" size="11" name="HiraKakuProN-W3"/>
+                            </box>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" title="番組表" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-w8-9HX">
+                                <rect key="frame" x="17" y="9" width="354" height="114"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="352" height="98"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Kn-8s-8Fr">
+                                            <rect key="frame" x="18" y="45" width="251" height="38"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="cellSize" width="152" height="18"/>
+                                            <size key="intercellSpacing" width="4" height="2"/>
+                                            <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="yJm-8e-20S">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <cells>
+                                                <column>
+                                                    <buttonCell type="radio" title="radiko.jp を使う" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="lQA-RM-cOO">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <buttonCell type="radio" title="指定した番組表を使う" imagePosition="left" alignment="left" tag="2" inset="2" id="LkG-U6-V4o">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                        <connections>
+                                                            <action selector="setRadioGuideMethodAndURL:" target="Voe-Tx-rLC" id="IjK-l1-dTO"/>
+                                                        </connections>
+                                                    </buttonCell>
+                                                </column>
+                                            </cells>
+                                            <connections>
+                                                <action selector="setRadioGuideMethodAndURL:" target="Voe-Tx-rLC" id="Oto-0t-LuX"/>
+                                            </connections>
+                                        </matrix>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMp-Hh-g4u">
+                                            <rect key="frame" x="18" y="14" width="316" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="番組表の URL を入力" drawsBackground="YES" id="PTL-Ae-d26">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <accessibility description="番組表の URL を入力" help="番組表の URL を入力"/>
+                                            <connections>
+                                                <action selector="setRadioGuideMethodAndURL:" target="Voe-Tx-rLC" id="yAh-jj-MgT"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" size="11" name="HiraKakuProN-W3"/>
+                            </box>
+                        </subviews>
+                    </customView>
                 </subviews>
             </view>
             <toolbar key="toolbar" implicitIdentifier="AC872141-8685-4F21-B241-69E63CD6A041" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="0Uu-l9-jUC">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="gFi-Re-9MZ"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="icd-12-F1F"/>
-                    <toolbarItem implicitItemIdentifier="EED92933-4427-4AFB-9338-99E43F299546" label="環境設定..." paletteLabel="環境設定..." tag="1" image="System Preferences" id="C0n-aF-gR2">
+                    <toolbarItem implicitItemIdentifier="EED92933-4427-4AFB-9338-99E43F299546" label="全般設定" paletteLabel="全般設定" tag="1" image="System Preferences" id="C0n-aF-gR2">
                         <connections>
                             <action selector="togglePrefWindowPanels:" target="Voe-Tx-rLC" id="Rb8-8w-she"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="A33165F9-C39C-4698-9C67-5711F7E42365" label="Raditunes について" paletteLabel="Raditunes について" tag="2" image="Untitled" id="rt2-zH-oVo">
+                    <toolbarItem implicitItemIdentifier="A33165F9-C39C-4698-9C67-5711F7E42365" label="Raditunes について" paletteLabel="Raditunes について" tag="2" image="Raditunes" id="rt2-zH-oVo">
                         <connections>
                             <action selector="togglePrefWindowPanels:" target="Voe-Tx-rLC" id="DYd-Ov-Rc9"/>
                         </connections>
@@ -744,11 +804,11 @@
                     <toolbarItem reference="rt2-zH-oVo"/>
                 </defaultToolbarItems>
             </toolbar>
-            <point key="canvasLocation" x="102" y="430.5"/>
+            <point key="canvasLocation" x="217" y="492"/>
         </window>
     </objects>
     <resources>
+        <image name="Raditunes" width="512" height="512"/>
         <image name="System Preferences" width="512" height="512"/>
-        <image name="Untitled" width="512" height="512"/>
     </resources>
 </document>
