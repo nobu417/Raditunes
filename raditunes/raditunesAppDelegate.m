@@ -19,6 +19,8 @@
     NSDictionary *dic;
     NSUserDefaults *userDefaults;
     NSInteger status;
+    NSString *radioGuideURLString;
+    NSString *radioGuideMethod;
 }
 
 // ======================================================================
@@ -50,6 +52,23 @@
     [_Chugoku setState: [userDefaults integerForKey: @"Chugoku"]];
     [_Kyushu setState: [userDefaults integerForKey: @"Kyushu"]];
     [_Zenkoku setState: [userDefaults integerForKey: @"Zenkoku"]];
+    
+    radioGuideMethod = [userDefaults valueForKey: @"Guide"];
+    radioGuideURLString = [userDefaults valueForKey: @"CustomURL"];
+    
+    NSLog(radioGuideMethod);
+    
+    if ([radioGuideMethod isEqualToString: @"custom"]) {
+        [_useRadikoJp setState: false];
+        [_useCustomURL setState: true];
+    } else {
+        [_useRadikoJp setState: true];
+        [_useCustomURL setState: false];
+    }
+    
+    if (radioGuideURLString != nil) {
+      [_radioGuideURL setStringValue: radioGuideURLString];
+    }
     
     // Loading the stations from dictonary.
     NSString *path = [[NSBundle mainBundle] pathForResource:@"channels" ofType:@"plist"];
@@ -114,7 +133,7 @@
 // ======================================================================
 -(IBAction)showPrefWindow:(id)sender
 {
-    [_prefPanel setHidden: false];
+    [_generalPanel setHidden: false];
     [_aboutPanel setHidden: true];
     [[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
     [_prefWindow makeKeyAndOrderFront:_prefWindow];
@@ -165,11 +184,16 @@
 }
 
 // ======================================================================
-// Mainmenu :: Open radiko.jp
+// Mainmenu :: Open radiko.jp or custom radio guide.
 // ======================================================================
-- (IBAction)openRadikoJp:(id)sender
+- (IBAction)openRadioGuide:(id)sender
 {
-    NSURL *url = [NSURL URLWithString:@"http://radiko.jp/"];
+    NSURL *url;
+    if ([radioGuideMethod isEqualToString: @"custom"]) {
+        url = [NSURL URLWithString: radioGuideURLString];
+    } else {
+        url = [NSURL URLWithString:@"http://radiko.jp/"];
+    }
     [[NSWorkspace sharedWorkspace] openURL:url];
     
 }
@@ -264,15 +288,32 @@
 {
     switch ([sender tag]) {
         case 1:
-            [_prefPanel setHidden: false];
+            [_generalPanel setHidden: false];
             [_aboutPanel setHidden: true];
             break;
         case 2:
-            [_prefPanel setHidden: true];
+            [_generalPanel setHidden: true];
             [_aboutPanel setHidden: false];
             break;
     }
 }
+
+// ======================================================================
+// Preference :: Setting radio guide to use.
+// ======================================================================
+- (IBAction)setRadioGuideMethodAndURL:(id)sender
+{
+    radioGuideURLString = [_radioGuideURL stringValue];
+
+    if ([[_radioGuide selectedCell] tag] == 2) {
+        radioGuideMethod = @"custom";
+    } else {
+        radioGuideMethod = @"radiko";
+    }
+    [userDefaults setValue:radioGuideMethod forKey:@"Guide"];
+    [userDefaults setValue:radioGuideURLString forKey:@"CustomURL"];
+}
+
 
 // ======================================================================
 // Preference :: Open GitHub.

@@ -25,7 +25,7 @@
 // ======================================================================
 // Outlets of preferene window.
 // ======================================================================
-@property (assign) IBOutlet NSView *prefPanel;          // Preference panel on preference window.
+@property (assign) IBOutlet NSView *generalPanel;       // General panel on preference window.
 @property (assign) IBOutlet NSView *aboutPanel;         // About panel on preference window.
 
 @property (assign) IBOutlet NSTextField *versionLabel;  // Label to show version information.
@@ -37,6 +37,12 @@
 @property (assign) IBOutlet NSButton *Chugoku;          // Checkbox of Chugoku.
 @property (assign) IBOutlet NSButton *Kyushu;           // Checkbox of Kyushu.
 @property (assign) IBOutlet NSButton *Zenkoku;          // Checkbox of Zenkoku.
+
+@property (assign) IBOutlet NSTextField *radioGuideURL; // URL of radio guide.
+
+@property (assign) IBOutlet NSButtonCell *useRadikoJp;  // Radio button to use radiko.jp as radio guide.
+@property (assign) IBOutlet NSButtonCell *useCustomURL; // Radio button to use custom URL as radio guide.
+@property (assign) IBOutlet NSMatrix *radioGuide;       // Radio group of radio guides.
 
 // ======================================================================
 // Outlets of main menu.
@@ -62,7 +68,9 @@
 - (IBAction)toggleIfMenuShown:(id)sender;
 
 - (IBAction)togglePrefWindowPanels:(id)sender;
+- (IBAction)setRadioGuideMethodAndURL:(id)sender;
+
 - (IBAction)openGitHub:(id)sender;
-- (IBAction)openRadikoJp:(id)sender;
+- (IBAction)openRadioGuide:(id)sender;
 
 @end
