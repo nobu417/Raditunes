@@ -180,7 +180,7 @@
     NSString *uriBase = @"http://radiko.jp/player/swf/player_4.1.0.00.swf?_=2012111501&station_id=";
     NSString *uriString = [NSString stringWithFormat:@"%@%@", uriBase, stationId];
     [_webView setMainFrameURL:uriString];
-    [_menuPlaying setTitle: [NSString stringWithFormat:@"%@ を再生中...", [currentItem title]]];
+    [_menuPlaying setTitle: [NSString stringWithFormat:@"🎧 %@ を再生中...", [currentItem title]]];
 }
 
 // ======================================================================
