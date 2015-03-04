@@ -16,6 +16,7 @@
 @implementation raditunesAppDelegate {
     NSStatusItem *_statusItem;
     NSMenuItem *currentItem;
+    NSString *stationId;
     NSDictionary *dic;
     NSUserDefaults *userDefaults;
     NSInteger status;
@@ -55,8 +56,6 @@
     
     radioGuideMethod = [userDefaults valueForKey: @"Guide"];
     radioGuideURLString = [userDefaults valueForKey: @"CustomURL"];
-    
-    NSLog(radioGuideMethod);
     
     if ([radioGuideMethod isEqualToString: @"custom"]) {
         [_useRadikoJp setState: false];
@@ -152,7 +151,7 @@
         int tag_value = (int)[currentItem tag];
         status = 1;
         NSString *stationKey = [[NSNumber numberWithUnsignedInt: tag_value] stringValue];
-        NSString *stationId = [dic objectForKey:stationKey];
+        stationId = [dic objectForKey:stationKey];
         NSString *uriBase = @"http://radiko.jp/player/swf/player_4.1.0.00.swf?_=2012111501&station_id=";
         NSString *uriString = [NSString stringWithFormat:@"%@%@", uriBase, stationId];
         [_webView setMainFrameURL:uriString];
@@ -161,6 +160,19 @@
         status = 0;
         [_webView setMainFrameURL:@"http://radiko.jp/player/swf/player_4.1.0.00.swf?_=2012111501&station_id="];
     }
+}
+
+// ======================================================================
+// Mainmenu :: Open the official website of current station.
+// ======================================================================
+- (IBAction)openStationsSite:(id)sender
+{
+    NSDictionary *sites;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"sites" ofType:@"plist"];
+    sites = [NSDictionary dictionaryWithContentsOfFile: path];
+    //NSURL *url = [NSURL URLWithString: [sites objectForKey:[dic objectForKey: [NSNumber numberWithUnsignedInt:[currentItem tag]]]]];
+    NSURL *url = [NSURL URLWithString: [sites objectForKey: stationId]];
+    [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 // ======================================================================
@@ -176,11 +188,12 @@
     status = 1;
     // Change station.
     NSString *stationKey = [[NSNumber numberWithUnsignedInt: tag_value] stringValue];
-    NSString *stationId = [dic objectForKey:stationKey];
+    stationId = [dic objectForKey:stationKey];
     NSString *uriBase = @"http://radiko.jp/player/swf/player_4.1.0.00.swf?_=2012111501&station_id=";
     NSString *uriString = [NSString stringWithFormat:@"%@%@", uriBase, stationId];
     [_webView setMainFrameURL:uriString];
     [_menuPlaying setTitle: [NSString stringWithFormat:@"🎧 %@ を再生中...", [currentItem title]]];
+    [_menuOpenSite setHidden: false];
 }
 
 // ======================================================================
