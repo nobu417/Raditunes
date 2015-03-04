@@ -20,7 +20,7 @@
 // ======================================================================
 // Outlets of main window.
 // ======================================================================
-@property (assign) IBOutlet WebView *webView;
+@property (assign) IBOutlet WebView *webView;           // WebView that acts as player.
 
 // ======================================================================
 // Outlets of preferene window.
@@ -56,7 +56,8 @@
 @property (assign) IBOutlet NSMenuItem *menuKyushu;     // Menu item of Hokkaido.
 @property (assign) IBOutlet NSMenuItem *menuZenkoku;    // Menu item of Zenkoku.
 
-@property (assign) IBOutlet NSMenuItem *menuPlaying;
+@property (assign) IBOutlet NSMenuItem *menuPlaying;    // Menu item of station name currently playing. (Always disabled.)
+@property (assign) IBOutlet NSMenuItem *menuOpenSite;   // Menu item to open station website currently playing.
 
 // ======================================================================
 // Events.
@@ -65,6 +66,7 @@
 - (IBAction)showPrefWindow:(id)sender;
 - (IBAction)tuning:(id)sender;
 - (IBAction)playAndPause:(id)sender;
+- (IBAction)openStationsSite:(id)sender;
 - (IBAction)toggleIfMenuShown:(id)sender;
 
 - (IBAction)togglePrefWindowPanels:(id)sender;

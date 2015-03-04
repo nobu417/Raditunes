@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C22959351AA6BCB20028390F /* sites.plist in Resources */ = {isa = PBXBuildFile; fileRef = C22959341AA6BCB20028390F /* sites.plist */; };
+		C229593B1AA6ED0F0028390F /* Raditunes.icns in Resources */ = {isa = PBXBuildFile; fileRef = C229593A1AA6ED0F0028390F /* Raditunes.icns */; };
 		C2668DCD1A9A4013004B4D03 /* System Preferences.icns in Resources */ = {isa = PBXBuildFile; fileRef = C2668DCC1A9A4013004B4D03 /* System Preferences.icns */; };
 		C2E1A29D18FBD01600307481 /* channels.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2E1A29C18FBD01600307481 /* channels.plist */; };
 		C2F485EC18FB1AA800F54EE1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F485EB18FB1AA800F54EE1 /* Cocoa.framework */; };
@@ -21,7 +23,6 @@
 		C2F4861618FB1AA900F54EE1 /* raditunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4861518FB1AA900F54EE1 /* raditunesTests.m */; };
 		C2F4862318FB1BCD00F54EE1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862118FB1BCD00F54EE1 /* icon.png */; };
 		C2F4862418FB1BCD00F54EE1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862218FB1BCD00F54EE1 /* icon@2x.png */; };
-		C2F4862618FB1C1900F54EE1 /* Raditunes.icns in Resources */ = {isa = PBXBuildFile; fileRef = C2F4862518FB1C1900F54EE1 /* Raditunes.icns */; };
 		C2F4862818FB1CA000F54EE1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F4862718FB1CA000F54EE1 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C22959341AA6BCB20028390F /* sites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sites.plist; sourceTree = "<group>"; };
+		C229593A1AA6ED0F0028390F /* Raditunes.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Raditunes.icns; sourceTree = "<group>"; };
 		C2668DCC1A9A4013004B4D03 /* System Preferences.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "System Preferences.icns"; sourceTree = "<group>"; };
 		C2E1A29C18FBD01600307481 /* channels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = channels.plist; sourceTree = "<group>"; };
 		C2F485E818FB1AA800F54EE1 /* Raditunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raditunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +61,6 @@
 		C2F4861518FB1AA900F54EE1 /* raditunesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = raditunesTests.m; sourceTree = "<group>"; };
 		C2F4862118FB1BCD00F54EE1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C2F4862218FB1BCD00F54EE1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		C2F4862518FB1C1900F54EE1 /* Raditunes.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Raditunes.icns; sourceTree = "<group>"; };
 		C2F4862718FB1CA000F54EE1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -87,7 +89,7 @@
 		C2F485DF18FB1AA800F54EE1 = {
 			isa = PBXGroup;
 			children = (
-				C2F4862518FB1C1900F54EE1 /* Raditunes.icns */,
+				C229593A1AA6ED0F0028390F /* Raditunes.icns */,
 				C2F485F118FB1AA800F54EE1 /* raditunes */,
 				C2F4860F18FB1AA900F54EE1 /* raditunesTests */,
 				C2F485EA18FB1AA800F54EE1 /* Frameworks */,
@@ -136,6 +138,7 @@
 				C2F4862218FB1BCD00F54EE1 /* icon@2x.png */,
 				C2F485F218FB1AA800F54EE1 /* Supporting Files */,
 				C2E1A29C18FBD01600307481 /* channels.plist */,
+				C22959341AA6BCB20028390F /* sites.plist */,
 			);
 			path = raditunes;
 			sourceTree = "<group>";
@@ -249,12 +252,13 @@
 			files = (
 				C2E1A29D18FBD01600307481 /* channels.plist in Resources */,
 				C2668DCD1A9A4013004B4D03 /* System Preferences.icns in Resources */,
+				C22959351AA6BCB20028390F /* sites.plist in Resources */,
 				C2F485F618FB1AA800F54EE1 /* InfoPlist.strings in Resources */,
 				C2F4862318FB1BCD00F54EE1 /* icon.png in Resources */,
+				C229593B1AA6ED0F0028390F /* Raditunes.icns in Resources */,
 				C2F485FC18FB1AA800F54EE1 /* Credits.rtf in Resources */,
 				C2F4860218FB1AA900F54EE1 /* MainMenu.xib in Resources */,
 				C2F4862418FB1BCD00F54EE1 /* icon@2x.png in Resources */,
-				C2F4862618FB1C1900F54EE1 /* Raditunes.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

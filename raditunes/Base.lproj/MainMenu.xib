@@ -32,6 +32,7 @@
                 <outlet property="menuKanto" destination="77p-tz-fjg" id="v49-EX-p9j"/>
                 <outlet property="menuKinki" destination="str-Hf-S8A" id="i7b-iq-53u"/>
                 <outlet property="menuKyushu" destination="ZlK-ho-sT5" id="qgl-lm-40g"/>
+                <outlet property="menuOpenSite" destination="1y5-iG-dkb" id="Gto-fN-LWn"/>
                 <outlet property="menuPlaying" destination="wyR-e7-ECJ" id="X7M-OO-Y6m"/>
                 <outlet property="menuZenkoku" destination="h8k-f9-5GT" id="dt6-5T-ihT"/>
                 <outlet property="prefWindow" destination="AbZ-U1-mfT" id="XMe-mm-jZr"/>
@@ -51,6 +52,12 @@
                 <menuItem title="放送局は未選択です" enabled="NO" id="wyR-e7-ECJ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
+                <menuItem title="放送局公式サイトを開く..." hidden="YES" id="1y5-iG-dkb">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openStationsSite:" target="Voe-Tx-rLC" id="fjs-L6-v9D"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="WpY-Be-ELw"/>
                 <menuItem title="番組表を開く..." id="F5D-16-jkd">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -65,7 +72,7 @@
                         <action selector="playAndPause:" target="Voe-Tx-rLC" id="GuS-Ls-Gdp"/>
                     </connections>
                 </menuItem>
-                <menuItem title="プレイヤーを表示" id="EU0-2q-8de">
+                <menuItem title="プレイヤーを表示..." id="EU0-2q-8de">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showWindow:" target="Voe-Tx-rLC" id="nwV-3P-QCm"/>
@@ -804,7 +811,7 @@
                     <toolbarItem reference="rt2-zH-oVo"/>
                 </defaultToolbarItems>
             </toolbar>
-            <point key="canvasLocation" x="217" y="492"/>
+            <point key="canvasLocation" x="-40" y="370"/>
         </window>
     </objects>
     <resources>
